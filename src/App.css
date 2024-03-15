@@ -1,0 +1,50 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+.bodyy{
+  display: flex;
+  justify-content: center;
+}
+body{
+  background-color: #222;
+  background-size: cover;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.weather-card{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin :30px;
+  color: white;
+  
+
+  
+}
+.search{
+  height: 20px;
+  margin-top: 20px;
+}
+button{
+ cursor: pointer;
+ transition: 0.2s ease-in-out;
+ height: 25px;
+}
+
+.container{
+  color: white;
+
+}
+.main{
+  background-color: #000000d0;
+  max-width: 450px;
+  padding: 2em;
+  border-radius:30px ;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+
+}
