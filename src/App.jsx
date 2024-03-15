@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
 
     if(!searchedValue){
-      setError("Please enter a city");
+      setError("Please enter a valid city");
       return;
     }
     
@@ -25,7 +25,7 @@ function App() {
      fetch(url)
      .then((response) => response.json())
       .then((data) =>setData(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((err) => console.error('Error fetching data:', err));
       // console.log(data);
 
   }
@@ -50,9 +50,10 @@ function App() {
       </div>
 
       <div className='weatherLoading'>
-        {/* {error && <p>{error}</p>} */}
+        {error && (<p style={{color : "whitesmoke"}}>{error}</p>)}
+        {console.log(error)}
         
-      {data && (
+      {data.main && (
           <div className='weather-card' >
             {console.log(data)}
             <h2>{`Weather in ${data.name} is : `}</h2>
